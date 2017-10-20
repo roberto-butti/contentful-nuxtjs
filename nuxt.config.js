@@ -1,3 +1,5 @@
+const contentful_config = require('./.contentful.json')
+
 module.exports = {
   /*
   ** Headers of the page
@@ -34,5 +36,11 @@ module.exports = {
         })
       }
     }
+  },
+  env: {
+    CTF_SPACE_ID: contentful_config.CTF_SPACE_ID,
+    CTF_CDA_ACCESS_TOKEN: contentful_config.CTF_CDA_ACCESS_TOKEN,
+    CTF_PERSON_ID: contentful_config.CTF_PERSON_ID,
+    CTF_BLOG_POST_TYPE_ID: contentful_config.CTF_BLOG_POST_TYPE_ID
   }
 }
